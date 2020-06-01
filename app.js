@@ -9,6 +9,10 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
+app.get('/', (req, res)=> {
+    res.json({message:'API is up now'})
+})
+
 app.get("/url-shortner", (req, res) => {
   shortUrl.short(req.body.url, function (err, url) {
     if (!err) {
