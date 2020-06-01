@@ -3,7 +3,7 @@ const app = express();
 const shortUrl = require("node-url-shortener");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
+const PORT = process.env.PORT || 8000 ;
 // parse application/json
 app.use(bodyParser.json());
 
@@ -21,5 +21,5 @@ app.get("/url-shortner", (req, res) => {
   });
 });
 
-const PORT = 8000 || process.env.PORT;
+
 app.listen(PORT, () => console.log("Server is up and running"));
