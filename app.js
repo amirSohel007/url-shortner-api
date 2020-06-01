@@ -22,4 +22,4 @@ app.get("/url-shortner", (req, res) => {
 });
 
 const PORT = 8000 || process.env.PORT;
-app.listen(8000, () => console.log("Server is up and running"));
+app.listen(PORT, () => console.log("Server is up and running"));
