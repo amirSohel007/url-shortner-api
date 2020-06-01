@@ -4,6 +4,7 @@ const shortUrl = require("node-url-shortener");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = process.env.PORT || 8000 ;
+
 // parse application/json
 app.use(bodyParser.json());
 
@@ -13,7 +14,7 @@ app.use(cors());
 app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
 
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
