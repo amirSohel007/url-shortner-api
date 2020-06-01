@@ -36,7 +36,7 @@ app.get('/', (req, res)=> {
     res.json({message:'API is up now'})
 })
 
-app.get("/url-shortner", (req, res) => {
+app.post("/url-shortner", (req, res) => {
   shortUrl.short(req.body.url, function (err, url) {
     if (!err) {
       res.json({ shortUrl: url });
