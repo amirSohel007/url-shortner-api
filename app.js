@@ -5,10 +5,12 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = process.env.PORT || 8000 ;
 
+app.use(cors());
+
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(cors());
+
 
 // Add headers
 app.use(function (req, res, next) {
